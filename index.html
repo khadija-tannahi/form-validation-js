@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+    <script src="form.js"></script>
+      
+      <script>
+        document.write('<link rel="stylesheet" type="text/css" href="style/stylesheet.css">');
+      </script>
+
+
+
+  </head>
+
+  <body>
+    <header>
+
+      <div class="nav-container">
+ 
+ 
+        <div class="logo">Registration Form </div>
+  
+  
+        <nav class="nav">
+ 
+          <div id="date"></div>
+         
+        </nav> 
+
+  
+       </div>
+
+      
+    </header>
+
+     <br>
+     <br>
+
+
+    <main>
+
+     <form id="form"> 
+
+      
+
+      <h1>
+        Register
+      </h1>
+
+      <P class="p">
+        Please fill out the following fields to register:
+      </P>
+
+     
+
+        <label for="userName"><strong> Name :</strong></label> 
+
+  <div class="name">
+
+    <div class="form-control">
+        <input type="text"  name="userName" id="userName" placeholder="First name"> 
+        <i class="fa fa-check-square"></i>
+        <i class="fa fa-plus-square"></i>
+        <small>Error Message</small>
+    </div>    
+      
+
+     
+
+    <div class="form-control">
+      <input type="text"  name="lname"  id="lname" placeholder="Last name"> 
+      <i class="fa fa-check-square"></i>
+      <i class="fa fa-plus-square"></i>
+      <small>Error Message</small>
+    </div>
+
+  </div> 
+
+     
+
+
+     <label for="phoneNumber"><strong> Phone Number :</strong> </label> 
+
+     <div class="form-control">
+     <input type="tel" name="phoneNumber" id="phoneNumber"  placeholder="e.g., xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+     <i class="fa fa-check-square"></i>
+     <i class="fa fa-plus-square"></i>
+     <small>Error Message</small>
+    </div> 
+
+     
+
+     <label for="address"><strong> Address :</strong></label>
+     
+     <div class="form-control">
+     <input type="text"  name="address" id="address" placeholder="Street Address"> 
+     <i class="fa fa-check-square"></i>
+     <i class="fa fa-plus-square"></i>
+     <small>Error Message</small>
+     </div> 
+     
+
+    <div class="side-by-side">
+
+      <div class="form-control">
+      <input type="text" name="city" placeholder="City"  id="city"> 
+      <i class="fa fa-check-square"></i>
+      <i class="fa fa-plus-square"></i>
+      <small>Error Message</small>
+      </div> 
+
+    <div class="form-control">
+
+      <select name="state" id="state">
+
+      </select>  
+      <i class="fa fa-check-square"></i>
+      <i class="fa fa-plus-square"></i>
+      <small>Error Message</small>
+      </div> 
+     
+      
+      <div class="form-control">
+      <input type="text"  name="zip" id="zip" placeholder="Zip code" pattern="[0-9]{5}"> 
+      <i class="fa fa-check-square"></i>
+      <i class="fa fa-plus-square"></i>
+      <small>Error Message</small>
+      </div> 
+
+    </div> 
+
+   
+
+     
+
+     <label for="email"><strong>Email:</strong></label> 
+
+    
+
+      <div class="form-control">
+      <input type="email"  name="email" id="email" placeholder="example@.com">
+      <i class="fa fa-check-square"></i>
+      <i class="fa fa-plus-square"></i>
+      <small>Error Message</small>
+      </div>  
+      
+
+
+     <button type="submit">Submit</button>
+
+
+
+  </form>
+
+
+   <script>
+
+
+    // date
+   function getDate() {
+   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+   const currentDate = new Date().toLocaleDateString('en-US', options);
+   return currentDate;
+
+   }
+
+
+
+    document.getElementById('date').textContent = getDate();
+
+
+   
+
+
+   </script>
+
+
+    </main>
+
+    
+
+    <footer>
+      <p class="footer">
+        &copy; JavaScript KT
+      </p>
+    </footer>
+
+
+
+
+
+  </body>
+
+</html>
